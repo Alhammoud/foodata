@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 app.use(express.json());
+app.use(cors());
 app.use('/', express.static('public'));
 
 require('dotenv').config();
@@ -150,4 +152,4 @@ app.get('/searchId', async (req, res) => {
 console.log('Server gestartet')
 
 
-app.listen(3001);
+app.listen(3150);
